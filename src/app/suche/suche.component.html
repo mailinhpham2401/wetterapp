@@ -1,0 +1,78 @@
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="row">
+    <div class="col-12">
+        <form>
+            <div class="form-group">
+                <label for="typeahead-focus">Suche:</label>
+<input
+  id="typeahead-focus"
+  type="text"
+  class="form-control"
+  [(ngModel)]="model"
+  [ngbTypeahead]="search"
+  (focus)="focus$.next($event.target.value)"
+  (click)="click$.next($event.target.value)"
+  #instance="ngbTypeahead"
+/>
+
+<div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Mit vorhandenen Zutaten mixbar</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Suchen</button>
+     {{ model | json }}
+
+</div>
+        </form>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 my-3">
+        <h3>Liste aller Cocktails</h3>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-auto">
+                            <img class="card-img" style="height:270px; width:auto;" src="https://www.196flavors.com/wp-content/uploads/2018/09/cuba-libre-1.jpg"
+                            alt="Cuba-Libre">
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card-body">
+                                <a class="card-title float-left nav-link" [routerLink]="'/favorit'">Cuba Libre</a>
+                                <br>
+                                <hr width="80%">
+                                <p class="card-text float-left">
+                                    <small class="text-muted">3 mals als Favorit gespeichert</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-6"></div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        
+    </div>
+</div>
+</div>
+</div>
+  <!--Impressum-->
+  <div class="row">
+    <div class="col-12">
+      <hr/>
+      <a class="nav-link" [routerLink]="'/impressum'">Impressum</a>    
+    </div>
+  </div>
+</div>

@@ -1,0 +1,178 @@
+<div class="container">
+    <div class="row">
+    <div class="col-12 my-3">
+        <h3>Liste aller Cocktails</h3>
+    </div>
+</div>
+<div *ngIf="cocktailliste ===null">
+    <div ><app-nichtgefunden></app-nichtgefunden></div>
+
+<div *ngIf="getDataService.cocktailliste !==null">
+    <div *ngFor= "let cocktail of getDataService.cocktailliste.cocktails">
+
+
+<div class="row">
+    <div class="col-6">
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-auto">
+                    <img class="card-img" style ="height:100px;width:auto;" src="https://digiboard.htwk-leipzig.de/cocktail/pics/bahama-mama.jpg">
+                </div>
+                <div class="col-md-auto">
+                    <div class="card-body">
+                        <a class="card-title float-left nav-link" [routerLink]="'.'">{{cocktail.bezeichnung}}</a>
+                        <br/>
+                        <hr width=80%>
+                        <p class="card-text float-left">
+                            <small class="text-muted">3 mal als Favorit gespeichert</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="card mb-3">
+            <div class="row">
+                <div class="col-md-auto">
+                    <img class="card-img" style ="height:100px;width:auto;" src="">
+                </div>
+                <div class="col-md-auto">
+                    <div class="card-body">
+                        <a class="card-title float-left nav-link" [routerLink]="'.'">Bahama Mama</a>
+                        <br/>
+                        <hr width=80%>
+                        <p class="card-text float-left">
+                            <small class="text-muted">3 mal als Favorit gespeichert</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-auto">
+                    <img class="card-img" style ="height:100px;width:auto;" src="">
+                </div>
+                <div class="col-md-auto">
+                    <div class="card-body">
+                        <a class="card-title float-left nav-link" [routerLink]="'.'">Caipirinha</a>
+                        <br/>
+                        <hr width=80%>
+                        <p class="card-text float-left">
+                            <small class="text-muted">3 mal als Favorit gespeichert</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-auto">
+                    <img class="card-img" style ="height:100px;width:auto;" src="">
+                </div>
+                <div class="col-md-auto">
+                    <div class="card-body">
+                        <a class="card-title float-left nav-link" [routerLink]="'.'">Mai Tai</a>
+                        <br/>
+                        <hr width=80%>
+                        <p class="card-text float-left">
+                            <small class="text-muted">3 mal als Favorit gespeichert</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-auto">
+                    <img class="card-img" style ="height:100px;width:auto;" src="">
+                </div>
+                <div class="col-md-auto">
+                    <div class="card-body">
+                        <a class="card-title float-left nav-link" [routerLink]="'.'">Margarita</a>
+                        <br/>
+                        <hr width=80%>
+                        <p class="card-text float-left">
+                            <small class="text-muted">3 mal als Favorit gespeichert</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-auto">
+                <img class="card-img" style ="height:100px;width:auto;" src="">
+            </div>
+            <div class="col-md-auto">
+                <div class="card-body">
+                    <a class="card-title float-left nav-link" [routerLink]="'.'">Orange Fizz</a>
+                    <br/>
+                    <hr width=80%>
+                    <p class="card-text float-left">
+                        <small class="text-muted">3 mal als Favorit gespeichert</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="card mb-3">
+    <div class="row">
+        <div class="col-md-auto">
+            <img class="card-img" style ="height:100px;width:auto;" src="">
+        </div>
+        <div class="col-md-auto">
+            <div class="card-body">
+                <a class="card-title float-left nav-link" [routerLink]="'.'">Cuba Libre</a>
+                <br/>
+                <hr width=80%>
+                <p class="card-text float-left">
+                    <small class="text-muted">3 mal als Favorit gespeichert</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card mb-3">
+    <div class="row">
+        <div class="col-md-auto">
+            <img class="card-img" style ="height:100px;width:auto;" src="">
+        </div>
+        <div class="col-md-auto">
+            <div class="card-body">
+                <a class="card-title float-left nav-link" [routerLink]="'.'">Whiskey Sour</a>
+                <br/>
+                <hr width=80%>
+                <p class="card-text float-left">
+                    <small class="text-muted">3 mal als Favorit gespeichert</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+</div>
+</div>
+
+    </div>
+</div>
+
+  <!--Impressum-->
+  <div class="row">
+    <div class="col-12">
+      <hr/>
+      <a class="nav-link" [routerLink]="'/impressum'">Impressum</a>    
+    </div>
+  </div>
+</div>
